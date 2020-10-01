@@ -16,9 +16,9 @@ For the API, you’re free to use any open, public movie API to be able to retri
 
 Some APIs do request a sign up process, if you’d prefer not to make use of these, you can always use a local JSON server instead: 
 
-- Open Movie Database - OMDb API - The Open Movie Database 
-- The Movie Database - API Docs 
-- Local option – JSON-Server 
+- [Open Movie Database](http://www.omdbapi.com/) 
+- [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) 
+- [Local option - JSON-Server](https://github.com/typicode/json-server)
 
 ## Acceptance Criteria 
 

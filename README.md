@@ -5,11 +5,10 @@ Welcome to the MMT Digital Front-end test! The following activity will give you 
 
 We’d like you to implement an example of this, in the form of a movie database search, using the following design to guide your implementation: 
 
-[PIC HERE PLS]
+![MMT at the Movies Design](design.png)
 
 You can use [this Figma link](https://www.figma.com/proto/8InQTRWhd3JaqdnoY9TRxQ/Tech-Test?node-id=19%3A2&viewport=-766%2C78%2C0.6925315856933594&scaling=min-zoom) to get a higher definition version to check out:  
 
-&nbsp;
 ## API Access 
 
 For the API, you’re free to use any open, public movie API to be able to retrieve data to display. Open Movie Database and The Movie Database are examples of these. 
@@ -20,12 +19,10 @@ Some APIs do request a sign up process, if you’d prefer not to make use of the
 - The Movie Database - API Docs 
 - Local option – JSON-Server 
 
-&nbsp;
 ## Acceptance Criteria 
 
 We’ve set up some open-ended acceptance criteria below to help you get started with your test submission: 
 
-&nbsp;
 ### **MovieSearch-01**
 
 **AS A** user 
@@ -36,7 +33,6 @@ We’ve set up some open-ended acceptance criteria below to help you get started
 **WHEN** I view the page 
 **THEN** I can see a box with a button so I can search for a given movie title 
 
-&nbsp;
 ### **MovieSearch-02**
 
 **AS A** user 
@@ -49,7 +45,6 @@ We’ve set up some open-ended acceptance criteria below to help you get started
 
 **THEN** I can see a grid of movies, each showing the poster, title and year of release
 
-&nbsp;
 ### **MovieSearch-03**
 
 **AS A** user
@@ -58,7 +53,6 @@ We’ve set up some open-ended acceptance criteria below to help you get started
 
 **SO THAT** the page remains performant and I can see which group I am looking at
 
-&nbsp;
 
 **GIVEN** I am on the search page
 
@@ -68,7 +62,6 @@ We’ve set up some open-ended acceptance criteria below to help you get started
 
 **AND** I can click arrows to navigate between the groups of results 
 
-&nbsp;
 ### **MovieSearch-04**
 
 **AS A** user 
@@ -77,7 +70,6 @@ We’ve set up some open-ended acceptance criteria below to help you get started
 
 **SO THAT** I can decide whether to watch it 
 
-&nbsp;
 
 **GIVEN** I am on the search page
 
@@ -85,7 +77,6 @@ We’ve set up some open-ended acceptance criteria below to help you get started
 
 **THEN** a modal appears, displaying the poster, title, year, plot, director, genre and cast of the selected film 
 
-&nbsp;
 ## Things we love 
 
 - Testing - both the functionality and performance of your submission 
@@ -102,14 +93,12 @@ We’ve set up some open-ended acceptance criteria below to help you get started
 - Progressive enhancement considerations 
 - Use of types
 
-&nbsp;
 ## Getting started
 
 You can use any boilerplate you’re used to for getting started. A simple and recommended way is to use  [Create React App (CRA)](https://github.com/facebook/create-react-app). 
 
 To get started, run: - `npx create-react-app app && cd app && npm start`
 
-&nbsp;
 ## FAQs
 
 ### Am I allowed to Google stuff? 

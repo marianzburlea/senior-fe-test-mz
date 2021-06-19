@@ -109,3 +109,7 @@ Amazing! Here are some things that we’ve come up with, but feel free to get cr
 - Allow the layout to change from grid view to row view 
 - Optimise for ultimate performance 
 - Anything else that you can think of!
+
+# Thanks for this awesome challenge!
+
+Let's build this project!

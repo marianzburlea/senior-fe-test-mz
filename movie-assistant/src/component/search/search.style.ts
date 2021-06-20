@@ -1,7 +1,12 @@
 import styled from 'styled-components'
 
+export const SearchInfo = styled.div`
+  color: ${({ theme }) => theme.color.dark.text};
+`
+
 export const Search = styled.div`
   position: relative;
+  color: ${({ theme }) => theme.color.dark.text};
 
   & .mmtflix-search2 {
     position: absolute;

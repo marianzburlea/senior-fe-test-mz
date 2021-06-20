@@ -7,8 +7,15 @@ import theme from '../../config/theme'
 import Logo from '../logo'
 import Search from '../search'
 import TwoSide from '../two-side'
+import { useEffect, useReducer } from 'react'
+import { movieAssistantReducer } from './movie-assistant.reducer'
+import * as C from './movie-assistant.constant'
+import * as A from './movie-assistant.action'
 
 const MovieAssistant = () => {
+  const [state, dispatch] = useReducer(movieAssistantReducer, C.INITIAL_STATE)
+
+  console.log(state)
   return (
     <ThemeProvider theme={theme}>
       <CssReset>
@@ -18,13 +25,13 @@ const MovieAssistant = () => {
           <S.Header>
             <TwoSide>
               <Logo />
-              <Search />
+              <Search state={state} dispatch={dispatch} />
             </TwoSide>
           </S.Header>
 
           <S.Background>
             <TwoSide>
-              <S.Text>211 Results found</S.Text>
+              <S.Text>{state.totalResults} Results found</S.Text>
               <S.Text>
                 <p>Page 1 of 9</p>
                 <Button>

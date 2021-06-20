@@ -22,10 +22,23 @@ export const changePageAction = (page: number) => {
   }
 }
 
-export const searchAction = (term: string) => ({
+export const search = (term: string) => ({
   type: constant.SEARCH_FETCH,
   term,
 })
+
+export const searchAction = (term: string) => {
+  return async (dispatch: any) => {
+    dispatch(search(term))
+
+    try {
+      const url = `${constant.API_URL}s=${term}&page=${1}`
+
+      const { Search: list, totalResults } = await (await fetch(url)).json()
+      dispatch(searchActionSuccess(list, totalResults, 1))
+    } catch (error) {}
+  }
+}
 
 export const searchActionSuccess = (
   list: type.IMovie[],

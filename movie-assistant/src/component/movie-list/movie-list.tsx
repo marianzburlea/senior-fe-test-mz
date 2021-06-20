@@ -3,6 +3,10 @@ import TwoSide from '../two-side'
 import * as S from './movie-list.style'
 import * as action from '../../store/movie-assistant/movie-assistant.action'
 import { useSelector, useDispatch } from 'react-redux'
+import { Fragment } from 'react'
+
+const defaultPhoto =
+  'https://media.istockphoto.com/vectors/man-on-top-of-mountain-with-flag-thin-line-icon-discoverer-victory-vector-id1214504715'
 
 const MovieList = () => {
   const state = useSelector(({ movieAssitant }: any) => movieAssitant)
@@ -46,11 +50,15 @@ const MovieList = () => {
       </TwoSide>
 
       {/* za grid */}
-      {list.map(({ Title, Year, Poster, imdbID, Type }: any) => (
-        <div key={imdbID}>
-          {Title} - {Year} = {Type}
-        </div>
-      ))}
+      <S.Grid>
+        {list.map(({ Title, Year, Poster, imdbID }: any) => (
+          <div key={imdbID}>
+            <S.Poster imagePath={Poster === 'N/A' ? defaultPhoto : Poster} />
+            <S.Title>{Title}</S.Title>
+            <S.Title>{Year}</S.Title>
+          </div>
+        ))}
+      </S.Grid>
     </S.Background>
   )
 }

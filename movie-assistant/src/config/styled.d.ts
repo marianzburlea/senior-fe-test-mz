@@ -14,6 +14,11 @@ type TColor = {
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    borderRadius: {
+      s: string
+      m: string
+      normal: string
+    }
     color: TColor
   }
 }

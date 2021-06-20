@@ -1,28 +1,42 @@
 import Button from '../button'
-import S from '../font-icon'
+import GS from '../font-icon'
+import * as S from './movie-assistant.style'
 import CssReset from '../css-reset'
 import { ThemeProvider } from 'styled-components'
 import theme from '../../config/theme'
+import Logo from '../logo'
+import Search from '../search'
+import TwoSide from '../two-side'
 
 const MovieAssistant = () => {
-  // console.log(iconList(iconSet))
   return (
     <ThemeProvider theme={theme}>
       <CssReset>
-        <S.IconFont />
-        <h1>This is the movie assistant</h1>
-        <Button>
-          <i className="mmtflix-back-arrow"></i>
-        </Button>
-        <Button>
-          <i className="mmtflix-forward-arrow"></i>
-        </Button>
-        <Button>
-          <i className="mmtflix-search2"></i>
-        </Button>
-        <Button>
-          <i className="mmtflix-cross2"></i>
-        </Button>
+        <GS.IconFont />
+
+        <S.Wrapper>
+          <S.Header>
+            <TwoSide>
+              <Logo />
+              <Search />
+            </TwoSide>
+          </S.Header>
+
+          <S.Background>
+            <TwoSide>
+              <S.Text>211 Results found</S.Text>
+              <S.Text>
+                <p>Page 1 of 9</p>
+                <Button>
+                  <i className="mmtflix-back-arrow"></i>
+                </Button>
+                <Button>
+                  <i className="mmtflix-forward-arrow"></i>
+                </Button>
+              </S.Text>
+            </TwoSide>
+          </S.Background>
+        </S.Wrapper>
       </CssReset>
     </ThemeProvider>
   )

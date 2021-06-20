@@ -7,6 +7,8 @@ export const StyledCssReset = styled.div`
 `
 
 export const GlobalCss = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
   *,
   *::before,
   *::after {
@@ -20,6 +22,7 @@ export const GlobalCss = createGlobalStyle`
   html {
     margin: 0;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
     background-color: ${({ theme }) => theme.color.dark.background};
   }
 

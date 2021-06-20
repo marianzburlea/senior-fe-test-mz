@@ -6,9 +6,16 @@ export const movieAssistantReducer = (
   action: type.IAction
 ): type.IInitialState => {
   switch (action.type) {
+    case constant.CHANGE_PAGE:
+      return {
+        ...state,
+        page: action.page || 1,
+      }
+
     case constant.SEARCH_FETCH:
       return {
         ...state,
+        term: action.term || '',
         isLoading: true,
       }
 

@@ -1,32 +1,29 @@
-import { Dispatch, FormEvent, useState } from 'react'
-import * as movieAssistantType from '../movie-assitant/movie-assistant.type'
+import { FormEvent, useEffect, useState } from 'react'
 import * as S from './search.style'
-import * as action from '../movie-assitant/movie-assistant.action'
-import movieAssistant from '../movie-assitant/movie-assistant'
-import { API_URL } from '../movie-assitant/movie-assistant.constant'
+import * as action from '../../store/movie-assistant/movie-assistant.action'
+// import { API_URL } from '../movie-assitant/movie-assistant.constant'
+import { useSelector, useDispatch } from 'react-redux'
+import { API_URL } from '../../store/movie-assistant/movie-assistant.constant'
 
-interface ISearch {
-  dispatch: Dispatch<movieAssistantType.IAction>
-  state: movieAssistantType.IInitialState
-}
-
-const Search = ({ dispatch, state }: ISearch): JSX.Element => {
+const Search = (): JSX.Element => {
   const [searchTerm, updateTerm] = useState('')
-  const { isLoading, list, error } = state
+  const dispatch = useDispatch()
+  const state = useSelector(({ movieAssitant }: any) => movieAssitant)
+  const { isLoading, list, error, page } = state
 
   const handleSearch = (e: FormEvent) => {
     const { value } = e.target as HTMLInputElement
     updateTerm(value)
   }
 
-  const sendData = async (e: FormEvent) => {
-    e.preventDefault()
-    dispatch(action.searchAction())
+  const sendData = async (e?: FormEvent) => {
+    e && e.preventDefault()
+    dispatch(action.searchAction(searchTerm))
 
-    const url = `${API_URL}s=${searchTerm}&page=1`
+    // const url = `${API_URL}s=${searchTerm}&page=${page}`
 
-    const { Search: list, totalResults } = await (await fetch(url)).json()
-    dispatch(action.searchActionSuccess(list, totalResults, 1))
+    // const { Search: list, totalResults } = await (await fetch(url)).json()
+    // dispatch(action.searchActionSuccess(list, totalResults, 1))
   }
 
   return (

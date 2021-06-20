@@ -8,10 +8,15 @@ export const Button = styled.button`
   height: 44px;
   cursor: pointer;
   overflow: hidden;
-  transition: 250ms ease-in;
+  transition: 150ms ease-in;
   margin-left: 20px;
   border-radius: ${({ theme }) => theme.borderRadius.s};
   background-color: transparent;
+
+  &:disabled {
+    cursor: no-drop;
+    opacity: 0.5;
+  }
 
   &:hover {
     color: white;

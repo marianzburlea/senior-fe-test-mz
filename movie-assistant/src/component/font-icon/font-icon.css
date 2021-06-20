@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'mmtflix';
+  src: url('./font/mmtflix.ttf?rs1853') format('truetype'),
+    url('./font/mmtflix.woff?rs1853') format('woff'),
+    url('./font/mmtflix.svg?rs1853#mmtflix') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='mmtflix-'],
+[class*=' mmtflix-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'mmtflix' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mmtflix-search2:before {
+  content: '\eb33';
+}
+
+.mmtflix-cross2:before {
+  content: '\ed6d';
+}
+
+.mmtflix-back-arrow:before {
+  content: '\e900';
+}
+
+.mmtflix-forward-arrow:before {
+  content: '\e902';
+}

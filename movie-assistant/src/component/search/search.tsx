@@ -34,6 +34,7 @@ const Search = (): JSX.Element => {
           placeholder="Search here..."
           onChange={handleSearch}
           value={searchTerm}
+          autoFocus
         />
         <i className="mmtflix-search2"></i>
       </S.Search>

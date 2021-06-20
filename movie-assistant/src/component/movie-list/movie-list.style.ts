@@ -31,12 +31,13 @@ export const Poster = styled.div`
 
 export const Text = styled.div`
   color: ${({ theme }) => theme.color.dark.text};
-  padding: 2rem;
+  height: 4.6rem;
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: bold;
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
 `
 
 export const Background = styled.div`

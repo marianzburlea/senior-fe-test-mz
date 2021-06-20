@@ -34,6 +34,7 @@ const MovieList = () => {
     <S.Background>
       <TwoSide>
         <S.Text>{totalResults} Results found</S.Text>
+        <div />
         <S.Text>
           <p>
             Page {page} of {totalPages}

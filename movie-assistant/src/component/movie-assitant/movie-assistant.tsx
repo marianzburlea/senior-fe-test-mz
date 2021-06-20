@@ -20,6 +20,7 @@ const MovieAssistant = () => {
             <S.Header>
               <TwoSide>
                 <Logo />
+                <div />
                 <Search />
               </TwoSide>
             </S.Header>

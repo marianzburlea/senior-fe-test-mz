@@ -24,8 +24,17 @@ export const SearchInput = styled.input`
   border-radius: ${({ theme }) => theme.borderRadius.s};
   border: 0.2rem solid ${({ theme }) => theme.color.dark.text};
   background-color: transparent;
-  height: 50px;
-  padding: 0 20px;
+  height: 5rem;
+  padding: 0 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.4rem;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+    margin-left: 2rem;
+  }
 
   &:placeholder-shown + .mmtflix-search2 {
     opacity: 1;

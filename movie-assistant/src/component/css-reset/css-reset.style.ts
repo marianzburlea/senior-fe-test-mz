@@ -27,9 +27,13 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body,
-  #root  {
+  #here  {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+  }
+
+  #here  {
+    padding: 0 2.5rem;
   }
 `

@@ -1,7 +1,9 @@
 # Senior Front-end Engineer Code Challenge: MMT at the Movies! 
 
 
-Welcome to the MMT Digital Front-end test! The following activity will give you the chance to showcase your skills as a front-end engineer. You’ll have 24 hours to complete the test. Making it to the next stage of the process, we’ll talk through your code, and the decisions you’ve made. 
+Welcome to the MMT Digital Front-end test! The following activity will give you the chance to showcase your skills as a front-end engineer. You’ll have **48 hours** to complete the test. Making it to the next stage of the process, we’ll talk through your code, and the decisions you’ve made.
+
+Please read the entire document before you get started, to be sure of the requirements of the test:
 
 We’d like you to implement an example of this, in the form of a movie database search, using the following design to guide your implementation:
 
@@ -66,18 +68,15 @@ We’ve set up some open-ended acceptance criteria below to help you get started
 **WHEN** I click on a film  
 **THEN** a modal appears, displaying the poster, title, year, plot, director, genre and cast of the selected film   
 
-## Things we love 
+## Things we'd like to see: 
 
 - Testing - both the functionality and performance of your submission 
-- Use of modern JS frameworks like React, but keep in mind the position you are applying for and what we are looking for 
+- Use of modern JS frameworks like React, but keep in mind the position you are applying for and what we are looking for in the job description
 - Use of modern techniques beyond plain CSS 
 - A solution that is fully functioning and visually complete 
 - Well-linted, consistent code 
 - Accessibility considerations 
 - Next gen JavaScript, ES+, used appropriately 
-
-## Bonus points 
-
 - Frequent Git use with clear commit messages 
 - Progressive enhancement considerations 
 - Use of types
@@ -102,13 +101,15 @@ Ideally, yes. It’s expected that you will have made use of various branching s
 
 Amazing! Here are some things that we’ve come up with, but feel free to get creative:
 
-
 - Allow searching based on genre or different criteria 
 - Make use of lazy loading 
 - Random movie finder 
 - Add a method to buy or rent the film from somewhere like Amazon 
 - Add another theme 
 - Allow the layout to change from grid view to row view 
-- Add a modal to show more info for each movie 
 - Optimise for ultimate performance 
-- Incorporate PWA techniques 
+- Anything else that you can think of!
+
+# Thanks for this awesome challenge!
+
+Let's build this project!

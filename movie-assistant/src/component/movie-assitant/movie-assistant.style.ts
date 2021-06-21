@@ -8,6 +8,10 @@ export const Text = styled.div`
   font-weight: bold;
   display: flex;
   align-items: center;
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+  }
 `
 
 export const Background = styled.div`
@@ -15,6 +19,11 @@ export const Background = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.normal};
   color: ${({ theme }) => theme.color.dark.text};
   padding: 20px;
+
+  @media (prefers-color-scheme: light) {
+    background-color: ${({ theme }) => theme.color.light.backgroundGray};
+    color: ${({ theme }) => theme.color.light.text};
+  }
 `
 
 export const Wrapper = styled.div`

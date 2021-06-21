@@ -12,13 +12,6 @@ const MovieList = () => {
   const { page, totalResults, list, term } = state
 
   const dispatch = useDispatch()
-  // const list: {
-  //   Title: string
-  //   Year: string
-  //   Poster: string
-  //   imdbID: string
-  //   Type: string
-  // }[] = []
   const totalPages = Math.ceil(totalResults / 10)
 
   const previousPage = () => {
@@ -30,7 +23,6 @@ const MovieList = () => {
   }
 
   const select = (imdbID: string) => {
-    console.log('Select movie')
     dispatch(action.selectMovieAction(imdbID))
   }
 

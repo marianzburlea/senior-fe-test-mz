@@ -10,7 +10,7 @@ const defaultPhoto =
 
 const MovieList = () => {
   const state = useSelector(({ movieAssitant }: any) => movieAssitant)
-  const { page, totalResults, list } = state
+  const { page, totalResults, list, term } = state
 
   const dispatch = useDispatch()
   // const list: {
@@ -23,11 +23,16 @@ const MovieList = () => {
   const totalPages = Math.ceil(totalResults / 10)
 
   const previousPage = () => {
-    dispatch(action.changePageAction(page - 1))
+    dispatch(action.changePageAction(page - 1, term))
   }
 
   const nextPage = () => {
-    dispatch(action.changePageAction(page + 1))
+    dispatch(action.changePageAction(page + 1, term))
+  }
+
+  const select = (imdbID: string) => {
+    console.log('Select movie')
+    dispatch(action.selectMovieAction(imdbID))
   }
 
   return (
@@ -53,7 +58,7 @@ const MovieList = () => {
       {/* za grid */}
       <S.Grid>
         {list.map(({ Title, Year, Poster, imdbID }: any) => (
-          <div key={imdbID}>
+          <div key={imdbID} id={imdbID} onClick={() => select(imdbID)}>
             <S.Poster imagePath={Poster === 'N/A' ? defaultPhoto : Poster} />
             <S.Title>{Title}</S.Title>
             <S.Title>{Year}</S.Title>

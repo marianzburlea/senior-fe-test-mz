@@ -20,5 +20,10 @@ declare module 'styled-components' {
       normal: string
     }
     color: TColor
+    padding: {
+      square: string
+      big: string
+      rectangle: string
+    }
   }
 }

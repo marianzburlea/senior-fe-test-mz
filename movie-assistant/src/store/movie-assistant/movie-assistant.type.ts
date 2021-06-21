@@ -13,6 +13,7 @@ export interface IInitialState {
   term?: string
   totalResults: number
   page: number
+  viewType: 'grid' | 'list'
   imdbID?: string
   selected: {
     [prop: string]: any
@@ -25,6 +26,7 @@ export interface IAction {
   message?: string
   term?: string
   imdbID?: string
+  viewType: 'grid' | 'list'
   totalResults?: number
   page?: number
   selected: any

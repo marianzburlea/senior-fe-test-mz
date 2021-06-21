@@ -5,10 +5,16 @@ const Button = ({
   children,
   onClick,
   disabled,
+  hideOnMobile,
   ariaLabel,
 }: buttonType.ButtonProps) => {
   return (
-    <S.Button aria-label={ariaLabel} disabled={disabled} onClick={onClick}>
+    <S.Button
+      hideOnMobile={hideOnMobile}
+      aria-label={ariaLabel}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {children}
     </S.Button>
   )

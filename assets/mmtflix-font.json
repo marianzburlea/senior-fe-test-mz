@@ -1,0 +1,277 @@
+{
+  "metadata": {
+    "name": "mmtflix-font",
+    "lastOpened": 1418773394855,
+    "created": 1624176508939
+  },
+  "iconSets": [
+    {
+      "selection": [
+        {
+          "order": 24,
+          "prevSize": 16,
+          "ligatures": "list2, todo2",
+          "name": "list",
+          "id": 8,
+          "code": 60506,
+          "tempChar": ""
+        },
+        {
+          "order": 25,
+          "prevSize": 16,
+          "ligatures": "grid4, icons3",
+          "name": "grid",
+          "id": 9,
+          "code": 60511,
+          "tempChar": ""
+        },
+        {
+          "order": 26,
+          "prevSize": 16,
+          "ligatures": "search2, magnifier4",
+          "name": "search2",
+          "id": 7,
+          "code": 60211,
+          "tempChar": ""
+        },
+        {
+          "order": 27,
+          "prevSize": 16,
+          "ligatures": "cross2, cancel3",
+          "name": "cross2",
+          "id": 6,
+          "code": 60781,
+          "tempChar": ""
+        },
+        {
+          "order": 28,
+          "id": 5,
+          "name": "back-arrow",
+          "prevSize": 32,
+          "code": 59648,
+          "tempChar": ""
+        },
+        {
+          "order": 29,
+          "id": 3,
+          "name": "forward-arrow",
+          "prevSize": 32,
+          "code": 59650,
+          "tempChar": ""
+        },
+        {
+          "order": 30,
+          "id": 1,
+          "name": "mini-logo",
+          "prevSize": 32,
+          "code": 59660,
+          "tempChar": ""
+        }
+      ],
+      "id": 0,
+      "metadata": {
+        "name": "mmtflix",
+        "importSize": {
+          "width": 15,
+          "height": 22
+        }
+      },
+      "height": 1024,
+      "prevSize": 32,
+      "icons": [
+        {
+          "id": 8,
+          "paths": [
+            "M384 64h640v128h-640v-128zM384 448h640v128h-640v-128zM384 832h640v128h-640v-128zM0 128c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128zM0 512c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128zM0 896c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128z"
+          ],
+          "attrs": [],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "list",
+            "todo",
+            "bullet",
+            "menu",
+            "options"
+          ],
+          "defaultCode": 60506,
+          "grid": 16
+        },
+        {
+          "id": 9,
+          "paths": [
+            "M64 64h256v256h-256zM384 64h256v256h-256zM704 64h256v256h-256zM64 384h256v256h-256zM384 384h256v256h-256zM704 384h256v256h-256zM64 704h256v256h-256zM384 704h256v256h-256zM704 704h256v256h-256z"
+          ],
+          "attrs": [],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "grid",
+            "icons",
+            "apps",
+            "squares"
+          ],
+          "defaultCode": 60511,
+          "grid": 16
+        },
+        {
+          "id": 7,
+          "paths": [
+            "M637.542 557.848c41.806-57.89 66.458-128.984 66.458-205.848 0-194.404-157.596-352-352-352s-352 157.596-352 352 157.596 352 352 352c76.864 0 147.958-24.652 205.848-66.458l338.152 386.458 128-128-386.458-338.152zM352 608c-141.384 0-256-114.616-256-256s114.616-256 256-256c141.382 0 256 114.616 256 256s-114.614 256-256 256z"
+          ],
+          "attrs": [],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "search",
+            "magnifier",
+            "magnifying-glass",
+            "inspect",
+            "find"
+          ],
+          "defaultCode": 60211,
+          "grid": 16,
+          "colorPermutations": {
+            "1226352612552552551": []
+          }
+        },
+        {
+          "id": 6,
+          "paths": [
+            "M893.254 221.254l-90.508-90.508-290.746 290.744-290.746-290.744-90.508 90.506 290.746 290.748-290.746 290.746 90.508 90.508 290.746-290.746 290.746 290.746 90.508-90.51-290.744-290.744z"
+          ],
+          "attrs": [],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "cross",
+            "cancel",
+            "close",
+            "quit",
+            "remove"
+          ],
+          "defaultCode": 60781,
+          "grid": 16,
+          "colorPermutations": {
+            "1226352612552552551": []
+          }
+        },
+        {
+          "id": 5,
+          "paths": [
+            "M-0 512l523.636 443.406v-886.811l-523.636 443.405z"
+          ],
+          "attrs": [],
+          "width": 698,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 0,
+          "tags": [
+            "back-arrow"
+          ],
+          "colorPermutations": {
+            "1226352612552552551": []
+          }
+        },
+        {
+          "id": 3,
+          "paths": [
+            "M698.182 512l-523.636 443.406v-886.811l523.636 443.405z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "width": 698,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 0,
+          "tags": [
+            "forward-arrow"
+          ],
+          "colorPermutations": {
+            "1226352612552552551": [
+              {}
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "paths": [
+            "M479.415 502.063c-65.184 315.036-202.14 485.030-324.918 550.487l-144.133-105.961c43.6-72.806 98.757-196.64 139.801-397.141 76.878-365.135 251.652-543.527 398.916-578.428l106.865 79.177c-57.583 74.86-128.798 219.075-176.531 451.865z"
+          ],
+          "attrs": [],
+          "width": 661,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 0,
+          "tags": [
+            "mini-logo"
+          ],
+          "colorPermutations": {
+            "1226352612552552551": []
+          }
+        }
+      ],
+      "invisible": false,
+      "colorThemes": [
+        [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            226,
+            35,
+            26,
+            1
+          ],
+          [
+            255,
+            255,
+            255,
+            1
+          ]
+        ]
+      ],
+      "colorThemeIdx": 0
+    }
+  ],
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "mmtflix-",
+      "metadata": {
+        "fontFamily": "mmtflix",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false,
+      "noie8": true,
+      "ie7": false,
+      "cssVars": true,
+      "cssVarsFormat": "scss"
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  },
+  "uid": -1
+}

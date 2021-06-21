@@ -17,13 +17,11 @@ export const Selected = styled.div<any>`
   }
 `
 
-export const SelectedGrid = styled.div`
+export const SelectedGrid = styled.div<any>`
   padding: 4rem;
   background-color: ${({ theme }) => theme.color.dark.backgroundGray};
   color: ${({ theme }) => theme.color.dark.text};
-  display: grid;
   grid-gap: 2rem;
-  grid-template-columns: 1fr 2fr;
   overflow: hidden;
   max-width: 80vw;
   position: relative;
@@ -33,6 +31,10 @@ export const SelectedGrid = styled.div`
   @media (prefers-color-scheme: light) {
     color: ${({ theme }) => theme.color.light.text};
     background-color: ${({ theme }) => theme.color.light.backgroundGray};
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 2fr;
   }
 `
 
@@ -82,5 +84,5 @@ export const SelectedPoster = styled.div<any>`
   background-repeat: no-repeat;
   /* 300/226 = 1.327433628318584 */
   padding-top: 132.75%;
-  width: 300px;
+  max-width: 300px;
 `

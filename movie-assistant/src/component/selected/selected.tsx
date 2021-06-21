@@ -5,7 +5,7 @@ import * as action from '../../store/movie-assistant/movie-assistant.action'
 const Selected = () => {
   const state = useSelector(({ movieAssitant }: any) => movieAssitant)
   const dispatch = useDispatch()
-  const { selected } = state
+  const { selected, viewType } = state
   const show = Object.keys(selected).length
 
   const close = () => {
@@ -14,7 +14,7 @@ const Selected = () => {
 
   return (
     <S.Selected show={show}>
-      <S.SelectedGrid>
+      <S.SelectedGrid viewType={viewType}>
         <S.SelectedPoster
           aria-label="Selected movie poster"
           Poster={selected.Poster}

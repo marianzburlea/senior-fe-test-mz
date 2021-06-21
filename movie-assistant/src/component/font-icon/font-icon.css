@@ -24,6 +24,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.mmtflix-list:before {
+  content: '\ec5a';
+}
+
+.mmtflix-grid:before {
+  content: '\ec5f';
+}
+
 .mmtflix-search2:before {
   content: '\eb33';
 }

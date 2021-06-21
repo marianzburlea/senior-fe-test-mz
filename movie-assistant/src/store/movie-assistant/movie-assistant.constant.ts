@@ -9,6 +9,7 @@ export const SEARCH_FETCH_SUCCESS = '[movie-assistant] SEARCH_FETCH_SUCCESS ='
 export const SEARCH_FETCH_FAILURE = '[movie-assistant] SEARCH_FETCH_FAILURE'
 
 export const SELECT_MOVIE = '[movie-assistant] SELECT_MOVIE'
+export const TOGGLE_VIEW_TYPE = '[movie-assistant] TOGGLE_VIEW_TYPE'
 export const UNSELECT_MOVIE = '[movie-assistant] UNSELECT_MOVIE'
 export const SELECT_MOVIE_FETCH = '[movie-assistant] SELECT_MOVIE_FETCH'
 export const SELECT_MOVIE_FETCH_SUCCESS =
@@ -27,4 +28,5 @@ export const INITIAL_STATE: movieAssistantType.IInitialState = {
   term: '',
   imdbID: '',
   selected: {},
+  viewType: 'grid',
 }

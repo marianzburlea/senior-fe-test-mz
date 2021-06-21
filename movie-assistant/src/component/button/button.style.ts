@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Button = styled.button`
+export const Button = styled.button<any>`
   border: 2px solid ${({ theme }) => theme.color.dark.text};
   color: ${({ theme }) => theme.color.dark.text};
   border-radius: 6px;
@@ -21,6 +21,10 @@ export const Button = styled.button`
   &:hover {
     color: ${({ theme }) => theme.color.dark.text};
     background-color: ${({ theme }) => theme.color.dark.background};
+  }
+
+  @media screen and (max-width: 768px) {
+    display: ${({ hideOnMobile }) => (hideOnMobile ? 'none' : 'block')};
   }
 
   @media (prefers-color-scheme: light) {

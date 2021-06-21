@@ -9,7 +9,7 @@ const defaultPhoto =
 
 const MovieList = () => {
   const state = useSelector(({ movieAssitant }: any) => movieAssitant)
-  const { page, totalResults, list, term } = state
+  const { page, totalResults, list, term, viewType } = state
 
   const dispatch = useDispatch()
   const totalPages = Math.ceil(totalResults / 10)
@@ -24,6 +24,10 @@ const MovieList = () => {
 
   const select = (imdbID: string) => {
     dispatch(action.selectMovieAction(imdbID))
+  }
+
+  const setViewType = (viewType: 'grid' | 'list') => {
+    dispatch(action.setViewType(viewType))
   }
 
   return (
@@ -42,22 +46,40 @@ const MovieList = () => {
             ariaLabel="Previous page"
             onClick={previousPage}
             disabled={page < 2}
+            hideOnMobile={false}
           >
             <i className="mmtflix-back-arrow"></i>
           </Button>
 
           <Button
+            hideOnMobile={false}
             ariaLabel="Next page"
             onClick={nextPage}
             disabled={page >= totalPages}
           >
             <i className="mmtflix-forward-arrow"></i>
           </Button>
+
+          <Button
+            hideOnMobile
+            ariaLabel="Previous page"
+            onClick={() => setViewType('grid')}
+          >
+            <i className="mmtflix-grid"></i>
+          </Button>
+
+          <Button
+            hideOnMobile
+            ariaLabel="Previous page"
+            onClick={() => setViewType('list')}
+          >
+            <i className="mmtflix-list"></i>
+          </Button>
         </S.Text>
       </TwoSide>
 
       {/* za grid */}
-      <S.Grid>
+      <S.Grid viewType={viewType}>
         {list.map(({ Title, Year, Poster, imdbID }: any) => (
           <div key={imdbID} id={imdbID} onClick={() => select(imdbID)}>
             <S.Poster

@@ -10,6 +10,11 @@ export const unselectMovie = () => ({
   type: constant.UNSELECT_MOVIE,
 })
 
+export const setViewType = (viewType: 'grid' | 'list') => ({
+  type: constant.TOGGLE_VIEW_TYPE,
+  viewType,
+})
+
 export const selectMovieAction = (imdbID: string) => {
   return async (dispatch: any): Promise<void> => {
     dispatch(selectMovie(imdbID))

@@ -20,6 +20,12 @@ export const movieAssistantReducer = (
         isLoading: true,
       }
 
+    case constant.TOGGLE_VIEW_TYPE:
+      return {
+        ...state,
+        viewType: action.viewType,
+      }
+
     case constant.UNSELECT_MOVIE:
       return {
         ...state,

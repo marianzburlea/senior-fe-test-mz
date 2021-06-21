@@ -8,7 +8,7 @@ const Search = (): JSX.Element => {
   const [searchTerm, updateTerm] = useState('')
   const dispatch = useDispatch()
   const state = useSelector(({ movieAssitant }: any) => movieAssitant)
-  const { isLoading, list, error, page } = state
+  const { isLoading, error } = state
 
   const handleSearch = (e: FormEvent) => {
     const { value } = e.target as HTMLInputElement

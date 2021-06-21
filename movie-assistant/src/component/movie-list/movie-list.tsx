@@ -3,7 +3,6 @@ import TwoSide from '../two-side'
 import * as S from './movie-list.style'
 import * as action from '../../store/movie-assistant/movie-assistant.action'
 import { useSelector, useDispatch } from 'react-redux'
-import { Fragment } from 'react'
 
 const defaultPhoto =
   'https://media.istockphoto.com/vectors/man-on-top-of-mountain-with-flag-thin-line-icon-discoverer-victory-vector-id1214504715'

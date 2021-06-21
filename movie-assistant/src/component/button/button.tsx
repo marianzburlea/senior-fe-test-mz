@@ -1,9 +1,14 @@
 import * as buttonType from './button.type'
 import * as S from './button.style'
 
-const Button = ({ children, onClick, disabled }: buttonType.ButtonProps) => {
+const Button = ({
+  children,
+  onClick,
+  disabled,
+  ariaLabel,
+}: buttonType.ButtonProps) => {
   return (
-    <S.Button disabled={disabled} onClick={onClick}>
+    <S.Button aria-label={ariaLabel} disabled={disabled} onClick={onClick}>
       {children}
     </S.Button>
   )

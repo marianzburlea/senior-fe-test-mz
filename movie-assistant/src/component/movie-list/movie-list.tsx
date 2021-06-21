@@ -29,18 +29,28 @@ const MovieList = () => {
   return (
     <S.Background>
       <TwoSide>
-        <S.Text>{totalResults} Results found</S.Text>
+        <S.Text aria-label="Total results found">
+          {totalResults} Results found
+        </S.Text>
         <div />
         <S.Text>
-          <p>
+          <p aria-label="Current page of total pages">
             Page {page} of {totalPages}
           </p>
 
-          <Button onClick={previousPage} disabled={page < 2}>
+          <Button
+            ariaLabel="Previous page"
+            onClick={previousPage}
+            disabled={page < 2}
+          >
             <i className="mmtflix-back-arrow"></i>
           </Button>
 
-          <Button onClick={nextPage} disabled={page >= totalPages}>
+          <Button
+            ariaLabel="Next page"
+            onClick={nextPage}
+            disabled={page >= totalPages}
+          >
             <i className="mmtflix-forward-arrow"></i>
           </Button>
         </S.Text>
@@ -50,9 +60,12 @@ const MovieList = () => {
       <S.Grid>
         {list.map(({ Title, Year, Poster, imdbID }: any) => (
           <div key={imdbID} id={imdbID} onClick={() => select(imdbID)}>
-            <S.Poster imagePath={Poster === 'N/A' ? defaultPhoto : Poster} />
-            <S.Title>{Title}</S.Title>
-            <S.Title>{Year}</S.Title>
+            <S.Poster
+              aria-label="Poster image"
+              imagePath={Poster === 'N/A' ? defaultPhoto : Poster}
+            />
+            <S.Title aria-label="Movie title">{Title}</S.Title>
+            <S.Title aria-label="Movie year release">{Year}</S.Title>
           </div>
         ))}
       </S.Grid>

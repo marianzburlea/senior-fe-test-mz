@@ -26,6 +26,15 @@ export const GlobalCss = createGlobalStyle`
     background-color: ${({ theme }) => theme.color.dark.background};
   }
 
+
+  @media (prefers-color-scheme: light) {
+    html,
+    body {
+      background-color: ${({ theme }) => theme.color.light.background};
+    }
+  }
+
+
   body,
   #here  {
     display: flex;

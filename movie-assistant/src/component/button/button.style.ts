@@ -19,7 +19,17 @@ export const Button = styled.button`
   }
 
   &:hover {
-    color: white;
-    background-color: #000;
+    color: ${({ theme }) => theme.color.dark.text};
+    background-color: ${({ theme }) => theme.color.dark.background};
+  }
+
+  @media (prefers-color-scheme: light) {
+    border: 2px solid ${({ theme }) => theme.color.light.text};
+    color: ${({ theme }) => theme.color.light.text};
+
+    &:hover {
+      color: ${({ theme }) => theme.color.light.text};
+      background-color: ${({ theme }) => theme.color.light.background};
+    }
   }
 `

@@ -10,6 +10,11 @@ export const Selected = styled.div<any>`
   display: ${({ show }) => (show ? 'flex' : 'none')};
   justify-content: center;
   align-items: center;
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+    background-color: ${({ theme }) => theme.color.light.background};
+  }
 `
 
 export const SelectedGrid = styled.div`
@@ -24,6 +29,11 @@ export const SelectedGrid = styled.div`
   position: relative;
   max-height: 80vh;
   overflow-y: auto;
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+    background-color: ${({ theme }) => theme.color.light.backgroundGray};
+  }
 `
 
 export const SelectedClose = styled.div`
@@ -39,18 +49,31 @@ export const SelectedClose = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.color.dark.text};
   background-color: ${({ theme }) => theme.color.dark.background};
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+    background-color: ${({ theme }) => theme.color.light.background};
+  }
 `
 
 export const SelectedTitle = styled.h1`
   padding: ${({ theme }) => theme.padding.rectangle};
   color: ${({ theme }) => theme.color.dark.text};
   font-size: 3.6rem;
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+  }
 `
 
 export const SelectedDescription = styled.p`
   padding: ${({ theme }) => theme.padding.rectangle};
   color: ${({ theme }) => theme.color.dark.text};
   font-size: 1.8rem;
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+  }
 `
 
 export const SelectedPoster = styled.div<any>`

@@ -26,6 +26,7 @@ export const Poster = styled.div`
   padding-top: 132.75%;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
   background-image: url(${({ imagePath }: { imagePath: string }) => imagePath});
 `
 
@@ -38,6 +39,10 @@ export const Text = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+  }
 `
 
 export const Background = styled.div`
@@ -45,4 +50,9 @@ export const Background = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.normal};
   color: ${({ theme }) => theme.color.dark.text};
   padding: 2rem;
+
+  @media (prefers-color-scheme: light) {
+    background-color: ${({ theme }) => theme.color.light.backgroundGray};
+    color: ${({ theme }) => theme.color.light.text};
+  }
 `

@@ -11,10 +11,18 @@ export const Loading = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+  }
 `
 
 export const SearchInfo = styled.div`
   color: ${({ theme }) => theme.color.dark.text};
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+  }
 `
 
 export const SearchError = styled.div`
@@ -36,10 +44,19 @@ export const Search = styled.div`
     transition: 250ms;
     opacity: 0;
   }
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+
+    & .mmtflix-search2 {
+      color: ${({ theme }) => theme.color.light.text};
+    }
+  }
 `
 
 export const SearchInput = styled.input`
   color: ${({ theme }) => theme.color.dark.text};
+  background-color: ${({ theme }) => theme.color.dark.background};
   border-radius: ${({ theme }) => theme.borderRadius.s};
   border: 0.2rem solid ${({ theme }) => theme.color.dark.text};
   background-color: transparent;
@@ -50,12 +67,18 @@ export const SearchInput = styled.input`
   line-height: 2.4rem;
   width: 100%;
 
+  &:placeholder-shown + .mmtflix-search2 {
+    opacity: 1;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ theme }) => theme.color.light.text};
+    background-color: ${({ theme }) => theme.color.light.background};
+    border: 0.2rem solid ${({ theme }) => theme.color.light.text};
+  }
+
   @media screen and (min-width: 768px) {
     width: 500px;
     margin-left: 2rem;
-  }
-
-  &:placeholder-shown + .mmtflix-search2 {
-    opacity: 1;
   }
 `

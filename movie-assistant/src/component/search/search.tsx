@@ -24,6 +24,7 @@ const Search = (): JSX.Element => {
     <form onSubmit={sendData}>
       <S.Search>
         <S.SearchInput
+          aria-label="Search input"
           type="search"
           placeholder="Search here..."
           onChange={handleSearch}
@@ -33,8 +34,10 @@ const Search = (): JSX.Element => {
         <i className="mmtflix-search2"></i>
       </S.Search>
 
-      {isLoading && <S.SearchInfo>Loading...</S.SearchInfo>}
-      {error && <S.SearchInfo>{error}</S.SearchInfo>}
+      {isLoading && (
+        <S.Loading aria-label="Loading screen">Loading...</S.Loading>
+      )}
+      {error && <S.SearchInfo aria-label="Error screen">{error}</S.SearchInfo>}
     </form>
   )
 }

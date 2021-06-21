@@ -1,15 +1,14 @@
-import { FormEvent, useEffect, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import * as S from './search.style'
 import * as action from '../../store/movie-assistant/movie-assistant.action'
 // import { API_URL } from '../movie-assitant/movie-assistant.constant'
 import { useSelector, useDispatch } from 'react-redux'
-import { API_URL } from '../../store/movie-assistant/movie-assistant.constant'
 
 const Search = (): JSX.Element => {
   const [searchTerm, updateTerm] = useState('')
   const dispatch = useDispatch()
   const state = useSelector(({ movieAssitant }: any) => movieAssitant)
-  const { isLoading, list, error, page } = state
+  const { isLoading, error } = state
 
   const handleSearch = (e: FormEvent) => {
     const { value } = e.target as HTMLInputElement
@@ -19,11 +18,6 @@ const Search = (): JSX.Element => {
   const sendData = async (e?: FormEvent) => {
     e && e.preventDefault()
     dispatch(action.searchAction(searchTerm))
-
-    // const url = `${API_URL}s=${searchTerm}&page=${page}`
-
-    // const { Search: list, totalResults } = await (await fetch(url)).json()
-    // dispatch(action.searchActionSuccess(list, totalResults, 1))
   }
 
   return (
@@ -40,6 +34,7 @@ const Search = (): JSX.Element => {
       </S.Search>
 
       {isLoading && <S.SearchInfo>Loading...</S.SearchInfo>}
+      {error && <S.SearchInfo>{error}</S.SearchInfo>}
     </form>
   )
 }

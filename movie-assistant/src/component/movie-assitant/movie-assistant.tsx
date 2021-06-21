@@ -9,6 +9,7 @@ import Search from '../search'
 import TwoSide from '../two-side'
 import store from '../../store'
 import MovieList from '../movie-list'
+import Selected from '../selected'
 
 const MovieAssistant = () => {
   return (
@@ -25,6 +26,7 @@ const MovieAssistant = () => {
               </TwoSide>
             </S.Header>
             <MovieList />
+            <Selected />
           </S.Wrapper>
         </CssReset>
       </ThemeProvider>

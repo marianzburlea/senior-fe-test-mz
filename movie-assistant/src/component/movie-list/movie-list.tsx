@@ -3,31 +3,27 @@ import TwoSide from '../two-side'
 import * as S from './movie-list.style'
 import * as action from '../../store/movie-assistant/movie-assistant.action'
 import { useSelector, useDispatch } from 'react-redux'
-import { Fragment } from 'react'
 
 const defaultPhoto =
   'https://media.istockphoto.com/vectors/man-on-top-of-mountain-with-flag-thin-line-icon-discoverer-victory-vector-id1214504715'
 
 const MovieList = () => {
   const state = useSelector(({ movieAssitant }: any) => movieAssitant)
-  const { page, totalResults, list } = state
+  const { page, totalResults, list, term } = state
 
   const dispatch = useDispatch()
-  // const list: {
-  //   Title: string
-  //   Year: string
-  //   Poster: string
-  //   imdbID: string
-  //   Type: string
-  // }[] = []
   const totalPages = Math.ceil(totalResults / 10)
 
   const previousPage = () => {
-    dispatch(action.changePageAction(page - 1))
+    dispatch(action.changePageAction(page - 1, term))
   }
 
   const nextPage = () => {
-    dispatch(action.changePageAction(page + 1))
+    dispatch(action.changePageAction(page + 1, term))
+  }
+
+  const select = (imdbID: string) => {
+    dispatch(action.selectMovieAction(imdbID))
   }
 
   return (
@@ -53,7 +49,7 @@ const MovieList = () => {
       {/* za grid */}
       <S.Grid>
         {list.map(({ Title, Year, Poster, imdbID }: any) => (
-          <div key={imdbID}>
+          <div key={imdbID} id={imdbID} onClick={() => select(imdbID)}>
             <S.Poster imagePath={Poster === 'N/A' ? defaultPhoto : Poster} />
             <S.Title>{Title}</S.Title>
             <S.Title>{Year}</S.Title>

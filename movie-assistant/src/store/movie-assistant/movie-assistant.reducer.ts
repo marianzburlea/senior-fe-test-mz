@@ -9,6 +9,7 @@ export const movieAssistantReducer = (
     case constant.CHANGE_PAGE:
       return {
         ...state,
+        isLoading: true,
         page: action.page || 1,
       }
 
@@ -19,12 +20,33 @@ export const movieAssistantReducer = (
         isLoading: true,
       }
 
+    case constant.UNSELECT_MOVIE:
+      return {
+        ...state,
+        imdbID: '',
+        selected: {},
+      }
+
+    case constant.SELECT_MOVIE_FETCH:
+      return {
+        ...state,
+        imdbID: action.imdbID || '',
+        isLoading: true,
+      }
+
     case constant.SEARCH_FETCH_SUCCESS:
       return {
         ...state,
         list: action.list || [],
         page: action.page || 1,
         totalResults: action.totalResults || 0,
+        isLoading: false,
+      }
+
+    case constant.SELECT_MOVIE_FETCH_SUCCESS:
+      return {
+        ...state,
+        selected: action.selected,
         isLoading: false,
       }
 

@@ -4,6 +4,12 @@ export const SearchInfo = styled.div`
   color: ${({ theme }) => theme.color.dark.text};
 `
 
+export const SearchError = styled.div`
+  color: #c00;
+  padding: ${({ theme }) => theme.padding.rectangle};
+  border-color: 1px solid #c00;
+`
+
 export const Search = styled.div`
   position: relative;
   color: ${({ theme }) => theme.color.dark.text};

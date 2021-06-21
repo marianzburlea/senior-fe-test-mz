@@ -7,6 +7,15 @@ export const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&`
 export const SEARCH_FETCH = '[movie-assistant] SEARCH_FETCH'
 export const SEARCH_FETCH_SUCCESS = '[movie-assistant] SEARCH_FETCH_SUCCESS ='
 export const SEARCH_FETCH_FAILURE = '[movie-assistant] SEARCH_FETCH_FAILURE'
+
+export const SELECT_MOVIE = '[movie-assistant] SELECT_MOVIE'
+export const UNSELECT_MOVIE = '[movie-assistant] UNSELECT_MOVIE'
+export const SELECT_MOVIE_FETCH = '[movie-assistant] SELECT_MOVIE_FETCH'
+export const SELECT_MOVIE_FETCH_SUCCESS =
+  '[movie-assistant] SELECT_MOVIE_FETCH_SUCCESS ='
+export const SELECT_MOVIE_FETCH_FAILURE =
+  '[movie-assistant] SELECT_MOVIE_FETCH_FAILURE'
+
 export const CHANGE_PAGE = '[movie-assistant] CHANGE_PAGE'
 
 export const INITIAL_STATE: movieAssistantType.IInitialState = {
@@ -16,4 +25,6 @@ export const INITIAL_STATE: movieAssistantType.IInitialState = {
   totalResults: 0,
   page: 1,
   term: '',
+  imdbID: '',
+  selected: {},
 }

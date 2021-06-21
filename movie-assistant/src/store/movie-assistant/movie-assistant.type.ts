@@ -13,6 +13,10 @@ export interface IInitialState {
   term?: string
   totalResults: number
   page: number
+  imdbID?: string
+  selected: {
+    [prop: string]: any
+  }
 }
 
 export interface IAction {
@@ -20,6 +24,8 @@ export interface IAction {
   list?: IMovie[]
   message?: string
   term?: string
+  imdbID?: string
   totalResults?: number
   page?: number
+  selected: any
 }

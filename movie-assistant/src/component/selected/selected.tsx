@@ -1,12 +1,20 @@
 import { useSelector, useDispatch } from 'react-redux'
 import * as S from './selected.style'
 import * as action from '../../store/movie-assistant/movie-assistant.action'
+import { useEffect } from 'react'
 
 const Selected = () => {
   const state = useSelector(({ movieAssitant }: any) => movieAssitant)
   const dispatch = useDispatch()
   const { selected, viewType } = state
   const show = Object.keys(selected).length
+
+  useEffect(() => {
+    const here = document.querySelector('#here') as HTMLElement
+    if (here && here.style) {
+      here.style.overflow = show ? 'hidden' : 'auto'
+    }
+  }, [])
 
   const close = () => {
     dispatch(action.unselectMovie())

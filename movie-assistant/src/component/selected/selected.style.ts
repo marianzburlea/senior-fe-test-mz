@@ -21,6 +21,7 @@ export const SelectedGrid = styled.div<any>`
   padding: 4rem;
   background-color: ${({ theme }) => theme.color.dark.backgroundGray};
   color: ${({ theme }) => theme.color.dark.text};
+  display: grid;
   grid-gap: 2rem;
   overflow: hidden;
   max-width: 80vw;
